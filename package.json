@@ -37,8 +37,8 @@
     "build": "tsup src/index.ts",
     "typescript": "tsc",
     "prepublishOnly": "npm run build",
-    "test": "c8 ava",
-    "update-test-snapshot": "c8 ava --update-snapshots"
+    "test": "c8 ava --serial",
+    "update-test-snapshot": "c8 ava --update-snapshots --serial"
   },
   "dependencies": {
     "get-npm-tarball-url": "^2.0.3",
