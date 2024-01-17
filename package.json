@@ -37,8 +37,8 @@
     "build": "tsup src/index.ts",
     "typescript": "tsc",
     "prepublishOnly": "npm run build",
-    "test": "c8 ava --serial",
-    "update-test-snapshot": "c8 ava --update-snapshots --serial"
+    "test": "NODE_OPTIONS='--no-warnings --loader=@esbuild-kit/esm-loader' c8 ava --serial",
+    "update-test-snapshot": "NODE_OPTIONS='--no-warnings --loader=@esbuild-kit/esm-loader' c8 ava --update-snapshots --serial"
   },
   "dependencies": {
     "get-npm-tarball-url": "^2.1.0",
